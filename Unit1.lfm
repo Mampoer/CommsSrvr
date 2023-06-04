@@ -1,0 +1,834 @@
+object Form1: TForm1
+  Left = 306
+  Top = 178
+  Width = 800
+  Height = 480
+  Caption = 'Communication Server'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Position = poDesktopCenter
+  Visible = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  object pbAlive: TLMDProgressFill
+    Left = 265
+    Top = 2
+    Width = 260
+    Height = 15
+    Bevel.StyleOuter = bvLowered
+    Bevel.BorderWidth = 3
+    Bevel.Mode = bmCustom
+    FillObject.Style = sfGradient
+    FillObject.Gradient.Style = gstHorizontal
+    FillObject.Gradient.ColorList = (
+      16711680
+      4194304)
+    Anchors = [akLeft, akTop, akRight]
+    Step = 1
+    Position = 50
+    UserValue = 50
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 16
+    Width = 765
+    Height = 261
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Caption = 'Activity Log'
+    TabOrder = 0
+    object Memo1: TMemo
+      Left = 6
+      Top = 2
+      Width = 748
+      Height = 237
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Font.Charset = OEM_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -8
+      Font.Name = 'Terminal'
+      Font.Pitch = fpFixed
+      Font.Style = []
+      ParentFont = False
+      ScrollBars = ssBoth
+      TabOrder = 0
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 406
+    Top = 284
+    Width = 367
+    Height = 153
+    Anchors = [akRight, akBottom]
+    Caption = 'Serial Ports'
+    TabOrder = 1
+    object staPort1: TLMDShapeControl
+      Left = 14
+      Top = 34
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort1DblClick
+    end
+    object staPort2: TLMDShapeControl
+      Left = 102
+      Top = 34
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort2DblClick
+    end
+    object staPort3: TLMDShapeControl
+      Left = 190
+      Top = 34
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort3DblClick
+    end
+    object staPort4: TLMDShapeControl
+      Left = 278
+      Top = 34
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort4DblClick
+    end
+    object Label1: TLabel
+      Left = 6
+      Top = 34
+      Width = 6
+      Height = 13
+      Caption = '1'
+    end
+    object Label2: TLabel
+      Left = 94
+      Top = 34
+      Width = 6
+      Height = 13
+      Caption = '2'
+    end
+    object Label3: TLabel
+      Left = 182
+      Top = 34
+      Width = 6
+      Height = 13
+      Caption = '3'
+    end
+    object Label4: TLabel
+      Left = 270
+      Top = 34
+      Width = 6
+      Height = 13
+      Caption = '4'
+    end
+    object lblPort1: TLabel
+      Left = 14
+      Top = 18
+      Width = 35
+      Height = 13
+      Caption = 'lblPort1'
+    end
+    object lblPort2: TLabel
+      Left = 102
+      Top = 18
+      Width = 35
+      Height = 13
+      Caption = 'lblPort2'
+    end
+    object lblPort3: TLabel
+      Left = 190
+      Top = 18
+      Width = 35
+      Height = 13
+      Caption = 'lblPort3'
+    end
+    object lblPort4: TLabel
+      Left = 278
+      Top = 18
+      Width = 35
+      Height = 13
+      Caption = 'lblPort4'
+    end
+    object lblPort5: TLabel
+      Left = 14
+      Top = 74
+      Width = 35
+      Height = 13
+      Caption = 'lblPort5'
+    end
+    object staPort5: TLMDShapeControl
+      Left = 14
+      Top = 90
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort5DblClick
+    end
+    object Label9: TLabel
+      Left = 94
+      Top = 90
+      Width = 6
+      Height = 13
+      Caption = '6'
+    end
+    object lblPort6: TLabel
+      Left = 102
+      Top = 74
+      Width = 35
+      Height = 13
+      Caption = 'lblPort6'
+    end
+    object staPort6: TLMDShapeControl
+      Left = 102
+      Top = 90
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort6DblClick
+    end
+    object Label11: TLabel
+      Left = 182
+      Top = 90
+      Width = 6
+      Height = 13
+      Caption = '7'
+    end
+    object lblPort7: TLabel
+      Left = 190
+      Top = 74
+      Width = 35
+      Height = 13
+      Caption = 'lblPort7'
+    end
+    object staPort7: TLMDShapeControl
+      Left = 190
+      Top = 90
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort7DblClick
+    end
+    object Label13: TLabel
+      Left = 270
+      Top = 90
+      Width = 6
+      Height = 13
+      Caption = '8'
+    end
+    object lblPort8: TLabel
+      Left = 278
+      Top = 74
+      Width = 35
+      Height = 13
+      Caption = 'lblPort8'
+    end
+    object staPort8: TLMDShapeControl
+      Left = 278
+      Top = 90
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnDblClick = staPort8DblClick
+    end
+    object Label7: TLabel
+      Left = 6
+      Top = 90
+      Width = 6
+      Height = 13
+      Caption = '5'
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 7
+    Top = 284
+    Width = 105
+    Height = 73
+    Anchors = [akLeft, akBottom]
+    Caption = 'TCP Listener'
+    TabOrder = 2
+    object ledSessions: TLMDLEDLabel
+      Left = 30
+      Top = 18
+      Width = 41
+      Height = 30
+      Bevel.Mode = bmCustom
+      LED.Horzsize = 9
+      LED.Vertsize = 7
+      Caption = 'XX'
+    end
+    object Label5: TLabel
+      Left = 30
+      Top = 2
+      Width = 42
+      Height = 13
+      Caption = 'Sessions'
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 136
+    Top = 284
+    Width = 249
+    Height = 153
+    Anchors = [akBottom]
+    Caption = 'Upstream Links'
+    TabOrder = 3
+    object staUpstream1: TLMDShapeControl
+      Left = 22
+      Top = 11
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnClick = staUpstream1Click
+      OnDblClick = staUpstream1DblClick
+    end
+    object staUpstream2: TLMDShapeControl
+      Left = 22
+      Top = 43
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream2Click
+      OnDblClick = staUpstream2DblClick
+    end
+    object staUpstream3: TLMDShapeControl
+      Left = 22
+      Top = 75
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream3Click
+      OnDblClick = staUpstream3DblClick
+    end
+    object staUpstream4: TLMDShapeControl
+      Left = 22
+      Top = 107
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream4Click
+      OnDblClick = staUpstream4DblClick
+    end
+    object Label6: TLabel
+      Left = 14
+      Top = 18
+      Width = 6
+      Height = 13
+      Caption = '1'
+    end
+    object Label8: TLabel
+      Left = 14
+      Top = 50
+      Width = 6
+      Height = 13
+      Caption = '2'
+    end
+    object Label10: TLabel
+      Left = 14
+      Top = 82
+      Width = 6
+      Height = 13
+      Caption = '3'
+    end
+    object Label12: TLabel
+      Left = 14
+      Top = 114
+      Width = 6
+      Height = 13
+      Caption = '4'
+    end
+    object Label14: TLabel
+      Left = 142
+      Top = 18
+      Width = 6
+      Height = 13
+      Caption = '5'
+    end
+    object staUpstream5: TLMDShapeControl
+      Left = 150
+      Top = 11
+      Width = 75
+      Height = 25
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      OnClick = staUpstream5Click
+      OnDblClick = staUpstream5DblClick
+    end
+    object Label15: TLabel
+      Left = 142
+      Top = 50
+      Width = 6
+      Height = 13
+      Caption = '6'
+    end
+    object staUpstream6: TLMDShapeControl
+      Left = 150
+      Top = 43
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream6Click
+      OnDblClick = staUpstream6DblClick
+    end
+    object Label16: TLabel
+      Left = 142
+      Top = 82
+      Width = 6
+      Height = 13
+      Caption = '7'
+    end
+    object staUpstream7: TLMDShapeControl
+      Left = 150
+      Top = 75
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream7Click
+      OnDblClick = staUpstream7DblClick
+    end
+    object Label17: TLabel
+      Left = 142
+      Top = 114
+      Width = 6
+      Height = 13
+      Caption = '8'
+    end
+    object staUpstream8: TLMDShapeControl
+      Left = 150
+      Top = 106
+      Width = 75
+      Height = 25
+      Hint = 'Enable in .ini file'
+      Brush.Color = clSilver
+      Caption.Caption = 'Disabled'
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clWindowText
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = staUpstream8Click
+      OnDblClick = staUpstream8DblClick
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer1Timer
+    Left = 8
+    Top = 368
+  end
+  object ComPort1: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort1AfterOpen
+    OnRxChar = ComPort1RxChar
+    OnRing = ComPort1Ring
+    OnDSRChange = ComPort1DSRChange
+    OnRLSDChange = ComPort1RLSDChange
+    Left = 488
+    Top = 416
+  end
+  object ComPort2: TComPort
+    BaudRate = brCustom
+    Port = 'COM2'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort2AfterOpen
+    OnRxChar = ComPort2RxChar
+    OnRing = ComPort2Ring
+    OnDSRChange = ComPort2DSRChange
+    OnRLSDChange = ComPort2RLSDChange
+    Left = 520
+    Top = 416
+  end
+  object ComPort3: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort3AfterOpen
+    OnRxChar = ComPort3RxChar
+    OnRing = ComPort3Ring
+    OnDSRChange = ComPort3DSRChange
+    OnRLSDChange = ComPort3RLSDChange
+    Left = 552
+    Top = 416
+  end
+  object ComPort4: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort4AfterOpen
+    OnRxChar = ComPort4RxChar
+    OnRing = ComPort4Ring
+    OnDSRChange = ComPort4DSRChange
+    OnRLSDChange = ComPort4RLSDChange
+    Left = 584
+    Top = 416
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 200
+    OnTimer = Timer2Timer
+    Left = 48
+    Top = 368
+  end
+  object Timer3: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer3Timer
+    Left = 88
+    Top = 368
+  end
+  object Server1: TIdTCPServer
+    Bindings = <>
+    CommandHandlers = <>
+    CommandHandlersEnabled = False
+    DefaultPort = 0
+    Greeting.NumericCode = 0
+    MaxConnectionReply.NumericCode = 0
+    MaxConnections = 200
+    OnConnect = Server1Connect
+    OnExecute = Server1Execute
+    OnDisconnect = Server1Disconnect
+    OnException = Server1Exception
+    OnListenException = Server1ListenException
+    ReplyExceptionCode = 0
+    ReplyTexts = <>
+    ReplyUnknownCommand.NumericCode = 0
+    Left = 80
+  end
+  object IdTCPUpstream1: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream1Disconnected
+    OnConnected = IdTCPUpstream1Connected
+    Port = 0
+    Left = 112
+  end
+  object ComPort5: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort5AfterOpen
+    OnRxChar = ComPort5RxChar
+    OnRing = ComPort5Ring
+    OnDSRChange = ComPort5DSRChange
+    OnRLSDChange = ComPort5RLSDChange
+    Left = 616
+    Top = 416
+  end
+  object ComPort6: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort6AfterOpen
+    OnRxChar = ComPort6RxChar
+    OnRing = ComPort6Ring
+    OnDSRChange = ComPort6DSRChange
+    OnRLSDChange = ComPort6RLSDChange
+    Left = 648
+    Top = 416
+  end
+  object ComPort7: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort7AfterOpen
+    OnRxChar = ComPort7RxChar
+    OnRing = ComPort7Ring
+    OnDSRChange = ComPort7DSRChange
+    OnRLSDChange = ComPort7RLSDChange
+    Left = 680
+    Top = 416
+  end
+  object ComPort8: TComPort
+    BaudRate = brCustom
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbTwoStopBits
+    DataBits = dbEight
+    Events = [evRxChar, evRing, evDSR, evRLSD]
+    Buffer.InputSize = 4096
+    Buffer.OutputSize = 4096
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrEnable
+    FlowControl.ControlRTS = rtsEnable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    OnAfterOpen = ComPort8AfterOpen
+    OnRxChar = ComPort8RxChar
+    OnRing = ComPort8Ring
+    OnDSRChange = ComPort8DSRChange
+    OnRLSDChange = ComPort8RLSDChange
+    Left = 712
+    Top = 416
+  end
+  object IdTCPUpstream2: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream2Disconnected
+    OnConnected = IdTCPUpstream2Connected
+    Port = 0
+    Left = 144
+  end
+  object IdTCPUpstream3: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream3Disconnected
+    OnConnected = IdTCPUpstream3Connected
+    Port = 0
+    Left = 176
+  end
+  object IdTCPUpstream4: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream4Disconnected
+    OnConnected = IdTCPUpstream4Connected
+    Port = 0
+    Left = 208
+  end
+  object IdTCPUpstream5: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream5Disconnected
+    OnConnected = IdTCPUpstream5Connected
+    Port = 0
+    Left = 544
+  end
+  object IdTCPUpstream6: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream6Disconnected
+    OnConnected = IdTCPUpstream6Connected
+    Port = 0
+    Left = 576
+  end
+  object IdTCPUpstream7: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream7Disconnected
+    OnConnected = IdTCPUpstream7Connected
+    Port = 0
+    Left = 608
+  end
+  object IdTCPUpstream8: TIdTCPClient
+    MaxLineLength = 1024
+    MaxLineAction = maException
+    ReadTimeout = 0
+    RecvBufferSize = 8192
+    SendBufferSize = 8192
+    OnDisconnected = IdTCPUpstream8Disconnected
+    OnConnected = IdTCPUpstream8Connected
+    Port = 0
+    Left = 640
+  end
+end
